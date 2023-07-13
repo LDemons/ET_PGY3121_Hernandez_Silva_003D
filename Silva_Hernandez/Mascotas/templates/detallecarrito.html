@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/decoracion.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/paw_print_animal_icon_141148.png' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/bootstrap-icons/bootstrap-icons.css' %}">
+    <title>Mostrar Productos</title>
+ 
+</head>
+<body>
+    <div class="container">
+        <h3> Detalle de Compra </h3><br><h6>Fecha: {{ fecha }}</h6>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Código Boleta</th>
+                    <th>Código Producto</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prod in productos%}
+                <tr>
+                    <td>{{ prod.id_boleta }}</td>
+                    <td>{{ prod.id_producto }}</td>
+                    <td>{{ prod.cantidad }}</td>
+                    <td>{{ prod.subtotal }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+               
+            <tr><td><h6>Total Compra: {{ total }}</h6></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    {% load static %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/paw_print_animal_icon_141148.png' %}" >
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            {% for productos in productis %}
+            <div class="col-12 col-md-4">
+                <div class="card text-center">
+                    {% if productos.imagen %}
+                        <img src="{{ productos.imagen.url }}" class="card-img-top mx-auto">
+                    {% else %} 
+                        <img src="{% static 'img/rayo.jpg' %}" class="card-img-top mx-auto">
+                    {% endif %}
+                    <div class="card-body">
+                        <h4 class="card-title">{{ productos.descripcion }}</h4>
+                        <p class="card-text">
+                            Precio: {{ productos.precio }}<br>
+                            Stock: {{ productos.stock }}
+                       </p>
+                        <a href="{% url 'p_inicio' %}" class="btn btn-success">Inicio</a>
+                        <a href="{% url 'login' %}" class="btn btn-warning">Login</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

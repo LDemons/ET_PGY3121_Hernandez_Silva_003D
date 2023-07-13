@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/decoracion.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/paw_print_animal_icon_141148.png' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/bootstrap-icons/bootstrap-icons.css' %}">
+    <script src="js/funciones.js"></script>
+    <title>Pedo Stode - Calculadora</title>
+</head>
+<body>
+
+
+    <br>
+
+
+    <div class="container">
+        <h2>Calculadora</h2>
+
+        <p> como algunas personas necesitan una calculadora para comprar les dejamos una que hemos creado, a la hora de crearlo hemos 
+                pensado que sea utilizado para las cotizaciones de productos, para calcular cuanto ganan por un descuento, o por si quieren simplemente
+                calcular algo del momento, para lo que deseen. </p>
+
+        <img src="{% static 'img/paw_print_animal_icon_141148.png' %}" class="container" style="text-align:center; width: 100px; ">
+
+        <br>
+
+        <form name="datos" method="post"><br>
+
+            <div class="form-group">
+                <label for="num1">Digite un número: </label>
+                <input type="number" id="num1" name="num1" required placeholder="Digite un número"
+                        class="form-control">
+            </div><br>
+
+            <div class="form-group">
+                <label for="num2">Digite otro número: </label>
+                <input type="number" id="num2" name="num2" required placeholder="Digite un número"
+                        class="form-control">
+            </div><br>
+
+            <div class="form-group">
+                <input type="button" value="Sumar dos números" id="sumar" class="btn btn-success">
+                <input type="button" value="Restar dos números" id="restar" class="btn btn-warning">
+                <input type="button" value="Multiplicar dos números" id="multiplicar" class="btn btn-danger">
+                <input type="button" value="Dividir dos números" id="dividir" class="btn btn-primary">
+            </div><br>
+
+            <div class="form-group">
+                <label for="resultado">Resultado: </label>
+                <input type="number" id="resultado" name="resultado" class="form-control">
+            </div><br>
+        </form>
+
+    </div>
+
+
+    <br>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+    <div class="container">
+    <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+        <i class="bi bi-geo-alt icon"></i>
+        <div>
+            <h4>Dirección</h4>
+            <p>
+            402 Santa Isabel <br>
+            Providencia, Región Metropolitana<br>
+            </p>
+        </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+        <i class="bi bi-telephone icon"></i>
+        <div>
+            <h4>Contactanos</h4>
+            <p>
+                <strong>Phone:</strong> +56 9 4248 1588<br>
+                <strong>Email:</strong> PedoStode@gmail.com<br>
+            </p>
+        </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+        <i class="bi bi-clock icon"></i>
+        <div>
+            <h4>Hora de atencion</h4>
+            <p>
+            <strong>Lun-Sab: 11AM</strong> - 23PM<br>
+            Domingo: Cerrado
+            </p>
+        </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+        <h4>Siguenos</h4>
+        <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="container">
+    <div class="copyright">
+        &copy; Copyright <strong><span>Pedo Stode</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+    </div>
+
+    </footer><!-- End Footer -->
+    <!-- End Footer -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/decoracion.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/paw_print_animal_icon_141148.png' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/bootstrap-icons/bootstrap-icons.css' %}">
+    <title>Crear Productos</title>
+    <style>
+        label.error{
+            color:red;
+            width: 200px;
+            font-size:0.8em;
+            
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#formulario").validate({
+                rules:{
+                    idProducto: "required",
+                    precio: "required",
+                    stock:"required",
+                    imagen:"required",
+                    descripcion:"required",
+                    categoria:"required",
+                },
+                messages:{
+                    idProducto:{
+                        required: 'Ingrese la id del producto..',
+                    },
+                    precio:{
+                        required: 'Ingrese un precio..',
+                    },
+                    stock: {
+                        required: 'Ingrese un el numero de stock..',
+                    },
+                    imagen:{
+                        required: 'Seleccione una imagen..',
+                    },
+                    descripcion:{
+                        required: 'Ingrese una descripcion..',
+                    },
+                    categoria:{
+                        required: 'Seleccione una categoria..',
+                    } 
+                },    
+
+            });
+        });
+    </script>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h2>Creando Productos</h2>
+        <form method="POST" id="formulario" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row">
+                <label for="{{ producto_form.field.name }}">
+                    {{producto_form.idProducto.label}}
+                </label>
+                {{ producto_form.idProducto }}
+            </div>
+
+            <div class="row">
+                <label for="{{ producto_form.field.name }}">
+                    {{producto_form.precio.label}}
+                </label>
+                {{ producto_form.precio }}
+            </div>
+
+            <div class="row">
+                <label for="{{ producto_form.field.name }}">
+                    {{producto_form.stock.label}}
+                </label>
+                {{ producto_form.stock }}
+            </div>
+
+            <div class="row">
+                <label for="{{ producto_form.field.name }}">
+                    {{producto_form.imagen.label}}
+                </label>
+                {{ producto_form.imagen }}
+            </div>
+
+            <div class="row">
+                <label for="{{ producto_form.field.name }}">
+                    {{producto_form.descripcion.label}}
+                </label>
+                {{ producto_form.descripcion }}
+            </div>
+
+            <div class="row">
+                <label for="{{ producto_form.field.name }}">
+                    {{producto_form.categoria.label}}
+                </label>
+                {{ producto_form.categoria }}
+            </div>
+
+
+            <br><br>
+            <div class="row">
+                <div class="col-md">
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                    <a href="{% url 'p_inicio' %}" class="btn btn-success">Inicio</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <br>
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Dirección</h4>
+            <p>
+              402 Santa Isabel <br>
+              Providencia, Región Metropolitana<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contactanos</h4>
+            <p>
+              <strong>Phone:</strong> +56 9 4248 1588<br>
+              <strong>Email:</strong> PedoStode@gmail.com<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Hora de atencion</h4>
+            <p>
+              <strong>Lun-Sab: 11AM</strong> - 23PM<br>
+              Domingo: Cerrado
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Siguenos</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Pedo Stode</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  
+</body>
+</html>
+{% endblock %}

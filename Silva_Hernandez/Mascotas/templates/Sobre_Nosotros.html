@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/decoracion.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/paw_print_animal_icon_141148.png' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/bootstrap-icons/bootstrap-icons.css' %}">
+    <title>Pedo Stode - Sobre Nosotros</title>
+</head>
+<body>
+
+    <br> 
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-7">
+                <ul>
+                    <li>
+                        <a><h3>Sobre nosotros</h3></a>
+                    </li>
+                </ul>
+                <br>
+            </div>
+
+            
+
+            <div class="col-xl-7">
+
+
+                <ul>
+                    <li> 
+                        <a> Somos un grupo de amigas apasionadas por los animales y nos encanta consentir a nuestras mascotas con productos de calidad, por lo que decidimos unir nuestras fuerzas y crear nuestra propia tienda en línea de productos para mascotas.</a>
+                    </li>
+                </ul>
+                <br>
+
+                <ul>
+                    <li> 
+                        <a> En nuestra tienda, encontrarás una amplia variedad de productos para perros, gatos y otras mascotas. Desde juguetes y camas hasta ropa y accesorios, todos nuestros productos están cuidadosamente seleccionados para garantizar la calidad y la seguridad de tus queridas mascotas.</a>
+                    </li>
+                </ul>
+                <br>
+
+                <ul>
+                    <li> 
+                        <a> Nos enorgullece ofrecer un servicio al cliente excepcional y asegurarnos de que cada cliente esté satisfecho con su compra. Siempre estamos disponibles para responder preguntas o ayudar a encontrar el producto perfecto para tu mascota.</a>
+                    </li>
+                </ul>
+                <br>
+
+                <ul>
+                    <li> 
+                        <a>Nos apasiona lo que hacemos y esperamos poder ayudarte a consentir a tus mascotas con nuestros productos. ¡Gracias por visitarnos!ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</a>
+                    </li>
+                </ul>
+                <br>
+
+            </div> <!-- col -->
+
+
+            <div class="col-xl-4" style="background-color:#ffeccb"> 
+                <img src="{% static 'img/diseno-logotipo-dibujos-animados-mascota-perro-lindo-estilo-diseno-plano_203040-109.avif' %}" width="370px" height="500px">
+            </div>
+
+            <br>
+        </div>
+    </div>
+
+    <div class="video-box">
+        <div class="video" style="text-align:center">
+            <video controls>
+                <source src="{% static 'img/clideo_editor_b95c66bf9cc548509f0278005121af0a.mp4' %}" type="video/mp4">
+                <source src="{% static 'img/clideo_editor_b95c66bf9cc548509f0278005121af0a.ogg' %}" type="video/ogg">
+            </video>
+        </div>
+    </div>
+    <br>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Dirección</h4>
+            <p>
+              402 Santa Isabel <br>
+              Providencia, Región Metropolitana<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contactanos</h4>
+            <p>
+                <strong>Phone:</strong> +56 9 4248 1588<br>
+                <strong>Email:</strong> PedoStode@gmail.com<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Hora de atencion</h4>
+            <p>
+              <strong>Lun-Sab: 11AM</strong> - 23PM<br>
+              Domingo: Cerrado
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Siguenos</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Pedo Stode</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+
+</body>
+</html>
+
+{% endblock %}
